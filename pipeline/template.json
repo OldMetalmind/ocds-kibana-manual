@@ -185,7 +185,7 @@
               "type": "text"
             },
             "id": {
-              "type": "long"
+              "type": "text"
             },
             "items": {
               "properties": {
@@ -299,7 +299,7 @@
                 "locality": {
                   "type": "keyword"
                 },
-                "postalCode": {
+		"postalCode": {
                   "type": "keyword"
                 },
                 "region": {

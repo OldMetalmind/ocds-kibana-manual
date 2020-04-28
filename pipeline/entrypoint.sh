@@ -41,7 +41,7 @@ do
     BASENAME=`basename $FILE`
     LINESFILE="${BASENAME/%$FILE_EXT/.records}"
     echo -e "Procesando $FILE, por favor espere."
-    jq -crM ".[].records[]" "$FILE" | sed 's/{"$numberLong":"\([^"]\+\)"}/\1/g' > "/data/$LINESFILE"
+    jq -crM ".records[]" "$FILE" | sed 's/{"$numberLong":"\([^"]\+\)"}/\1/g' > "/data/$LINESFILE"
     COUNTER=$((COUNTER+1))
 done
 
